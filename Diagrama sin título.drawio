@@ -37,7 +37,7 @@
         <mxCell id="5CdEp8pnM4DLNt0WHUKu-5" parent="wl4O8nv272Ip7dUtwtBQ-22" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="+ _init_(Capital_inicial)" vertex="1">
           <mxGeometry height="30" width="220" as="geometry" />
         </mxCell>
-        <mxCell id="wl4O8nv272Ip7dUtwtBQ-23" parent="wl4O8nv272Ip7dUtwtBQ-22" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+ Comprar(activo: Activo, cantidad:int)" vertex="1">
+        <mxCell id="wl4O8nv272Ip7dUtwtBQ-23" parent="wl4O8nv272Ip7dUtwtBQ-22" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+ Comprar(activo: Activo, cantidad: int)" vertex="1">
           <mxGeometry height="30" width="220" y="30" as="geometry" />
         </mxCell>
         <mxCell id="5CdEp8pnM4DLNt0WHUKu-6" parent="wl4O8nv272Ip7dUtwtBQ-22" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="+ valor_total()" vertex="1">
