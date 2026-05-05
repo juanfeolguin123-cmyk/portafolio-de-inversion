@@ -13,7 +13,7 @@ st.markdown("Simula inversión en multiples empresas con datos reales del mercad
 #lista de empresas
 empresas = ["TSLA", "AAPL", "MSFT", "GOOGL", "AMZN", "META", "NVDA", "JPM", "KO", "NFLX"]
 
-# ---------------- UI ----------------
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -38,21 +38,21 @@ if st.button("Ejecutar simulación"):
 
     datos = yf.download(empresas_seleccionadas, period="3mo")["Close"]
 
-    # Limpiar datos
+    # limpiar datos
     datos = datos.dropna()
 
     retornos = datos.pct_change().dropna()
 
-    # Distribución igual
+    # distribucion igual
     pesos = np.array([1/len(empresas_seleccionadas)] * len(empresas_seleccionadas))
 
-    # Simulación portafolio
+    # Simulacion portafolio
     portafolio = (retornos @ pesos) + 1
     portafolio = portafolio.cumprod()
 
     portafolio_total = capital_inicial * portafolio * (1 - comision)
 
-    # Resultados individuales
+    # resultados 
     resultados_individuales = []
 
     for empresa in empresas_seleccionadas:
@@ -80,7 +80,7 @@ if st.button("Ejecutar simulación"):
             opacity=0.4
         ))
 
-    # Línea principal
+    # linea principal del portafolio
     fig.add_trace(go.Scatter(
         y=portafolio_total,
         mode='lines',
@@ -111,7 +111,7 @@ if st.button("Ejecutar simulación"):
 
     st.plotly_chart(fig_pie, use_container_width=True)
 
-# guia de uso
+# instrucciones
 with st.expander("¿Como funciona nuestro simulador ?"):
     st.write("""
     Este simulador calcula la evolución de un portafolio de inversión
